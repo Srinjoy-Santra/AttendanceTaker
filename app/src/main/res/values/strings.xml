@@ -3,4 +3,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--States-->
+    <string name="present">Present</string>
+    <string name="absent">Absent</string>
+
+    <!--column headings-->
+    <string name="roll">Roll.</string>
+    <string name="name">Name</string>
+    <string name="status">Status</string>
+
 </resources>

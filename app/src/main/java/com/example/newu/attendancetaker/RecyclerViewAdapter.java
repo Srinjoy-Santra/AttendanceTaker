@@ -8,30 +8,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
     private static final String TAG = "RecyclerViewAdapter";
 
-    private ArrayList<String> mRolls = new ArrayList<>();
-    private ArrayList<String> mNames = new ArrayList<>();
-    private ArrayList<String> mStatuses = new ArrayList<>();
-    //private ArrayList<String> mTicks = new ArrayList<>();
+
+    private ArrayList<StudentBasics> mStudent = new ArrayList<>();
+
     private Context mContext;;
 
-    public RecyclerViewAdapter(Context mContext, ArrayList<String> mRolls, ArrayList<String> mNames, ArrayList<String> mStatuses) {
-        this.mRolls = mRolls;
-        this.mNames = mNames;
-        this.mStatuses = mStatuses;
+    public RecyclerViewAdapter(ArrayList<StudentBasics> mStudent, Context mContext) {
+        this.mStudent = mStudent;
         this.mContext = mContext;
     }
 
-
-
-
+    @NonNull
         @Override
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_listitem,parent
@@ -42,30 +39,35 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
 
         @Override
-        public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+        public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
 
             Log.d(TAG, "onBindViewHolder: called.");
             //Glide.
+            StudentBasics msb = mStudent.get(position);
+            holder.rollTv.setText(msb.getRoll());
+            //holder.statusTv.setText(mStatuses.get(position));
+            holder.fullnameTv.setText(msb.getName());
 
-            holder.rollTv.setText(mRolls.get(position));
-            holder.statusTv.setText(mStatuses.get(position));
-            holder.fullnameTv.setText(mNames.get(position));
+            if (msb.getTick()) {
+                holder.tickCb.setChecked(true);
+            } else {
+                holder.tickCb.setChecked(false);
+            }
 
-            /*holder.parentLayout.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Log.d(TAG, "onCLick: clickedOn"+mNames.get(position));
+            holder.statusTv.setText(mStudent.get(position).getStatus());
 
-                    Toast.makeText(mContext, mNames.get(position), Toast.LENGTH_SHORT).show();
-                }
-            });*/
         }
 
         @Override
         public int getItemCount() {
 
-            return mNames.size();
+            return mStudent.size();
         }
+
+
+
+
+
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView rollTv,fullnameTv,statusTv;
@@ -81,6 +83,26 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             tickCb = itemView.findViewById(R.id.tick);
             statusTv = itemView.findViewById(R.id.status);
 
+            //itemView.setOnClickListener(this);
+
+            //checkbox click event handling
+            tickCb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton buttonView,
+                                             boolean isChecked) {
+                    if (isChecked) {
+                        statusTv.setText(R.string.present);
+                    } else {
+                        statusTv.setText(R.string.absent);
+                    }
+                    Toast.makeText(mContext,
+                            rollTv.getText()+" marked " + statusTv.getText(),
+                            Toast.LENGTH_LONG).show();
+                }
+            });
+
         }
+
+
     }
 }

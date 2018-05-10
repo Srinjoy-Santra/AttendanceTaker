@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:padding="15dp"
-    android:id="@+id/parent_layout">
+    android:id="@+id/parent_layout"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="#e5f6f9">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,7 +18,7 @@
         android:text="Roll"
         />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
 
         android:id="@+id/fullname"
@@ -29,19 +32,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tick"
-
-
-        android:layout_toRightOf="@id/fullname"
+        android:onClick="onClick"
+        android:layout_toLeftOf="@id/status"
         android:layout_margin="17dp"/>
+        <!-- android:onClick="setStatus"-->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/status"
-        android:layout_toRightOf="@id/tick"
+
+        android:layout_alignParentRight="true"
         android:layout_margin="17dp"
         android:text="Absent"
 
-        android:textSize="17sp"
+        android:textSize="20sp"
         android:textColor="@color/colorAccent"
         android:textStyle="bold"/>
 

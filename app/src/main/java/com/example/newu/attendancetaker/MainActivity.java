@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -12,9 +14,9 @@ public class MainActivity extends Activity {
 
     private static final String TAG = "MainActivity";
     //vars
-    private ArrayList<String> mRolls = new ArrayList<>();
-    private ArrayList<String> mNames = new ArrayList<>();
-    private ArrayList<String> mStatuses = new ArrayList<>();
+   ;
+
+    private ArrayList<StudentBasics> mStudent = new ArrayList<>();
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -33,17 +35,21 @@ public class MainActivity extends Activity {
 
     private void initValues()
     {
-        mNames.add("Sam");
-        mNames.add("Raj");
-        mNames.add("Yash");
-        mNames.add("Tim");
-        mNames.add("Rob");
 
+        for(int i=0;i<6;i++)
+            mStudent.add(new StudentBasics("","","",true));
 
-        for(int i=0;i<5;i++)
+        mStudent.get(0).setName("Sam");
+        mStudent.get(1).setName("Raj");
+        mStudent.get(2).setName("Yash");
+        mStudent.get(3).setName("Tim");
+        mStudent.get(4).setName("Rob");
+        mStudent.get(5).setName("Srinjoy Santra");
+
+        for(int i=0;i<mStudent.size();i++)
         {
-            mStatuses.add("Absent");
-            mRolls.add(i+"");
+            mStudent.get(i).setTick(false);
+            mStudent.get(i).setRoll((160501+i)+"");
         }
 
 
@@ -55,9 +61,12 @@ public class MainActivity extends Activity {
     {
         Log.d(TAG, "initRecyclerView: init recyclerview.");
         RecyclerView recyclerView = findViewById(R.id.my_recycler_view);
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mRolls, mNames, mStatuses);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter( mStudent,this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
+    public void onClick(View view) {
+        TextView textView = (TextView)view.findViewById(R.id.status);
 
+    }
 }
