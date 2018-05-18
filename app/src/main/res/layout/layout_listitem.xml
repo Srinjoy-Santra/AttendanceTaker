@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/bluish"
     android:layout_height="wrap_content"
     android:padding="15dp"
     android:id="@+id/parent_layout"
     android:clickable="true"
     android:focusable="true"
-    android:background="#e5f6f9">
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="17dp"
+
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+
         android:id="@+id/roll"
 
         android:textSize="20sp"
-        android:text="Roll"
+        android:text="@string/roll"
+
         />
     <TextView
         android:layout_width="80dp"
@@ -25,8 +34,9 @@
 
         android:layout_margin="17dp"
         android:textSize="20sp"
-        android:text="Fullname"
+        android:layout_toEndOf="@id/roll"
         android:layout_toRightOf="@id/roll"
+        android:text="@string/name"
         />
     <CheckBox
         android:layout_width="wrap_content"
@@ -34,7 +44,14 @@
         android:id="@+id/tick"
         android:onClick="onClick"
         android:layout_toLeftOf="@id/status"
-        android:layout_margin="17dp"/>
+        android:layout_marginBottom="16dp"
+
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_toStartOf="@id/status"/>
         <!-- android:onClick="setStatus"-->
 
     <TextView
@@ -43,8 +60,16 @@
         android:id="@+id/status"
 
         android:layout_alignParentRight="true"
-        android:layout_margin="17dp"
-        android:text="Absent"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+
+        android:text="@string/absent"
 
         android:textSize="20sp"
         android:textColor="@color/colorAccent"
