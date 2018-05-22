@@ -1,16 +1,110 @@
 <resources>
-    <string name="app_name">AttendanceTaker</string>
+    <string name="app_name">Educator Assistant</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="url">Srinjoy-santra.github.io</string>
+
+    <string name="login">Login</string>
+    <string name="id_code">Your id :</string>
+    <string name="password">Your password :</string>
+    <string name="password_hint">MyPassWord</string>
+    <string name="back">back</string>
+
+    <!--OptionsPage-->
+    <string name="options_page">Options</string>
+    <string name="option1">Digital TLM</string>
+    <string name="option2">Routine</string>
+    <string name="option3">Attendance</string>
+    <string name="option4">Assessment</string>
+    <string name="option5">Training Needs</string>
+    <string name="image">image</string>
 
     <!--States-->
     <string name="present">Present</string>
     <string name="absent">Absent</string>
 
-    <!--column headings-->
+    <!--Main activity column headings-->
     <string name="roll">Roll.</string>
     <string name="name">Name</string>
     <string name="status">Status</string>
+    <string name="school_def">Unidentified School Name</string>
+    <string name="coordinator_def">Unidentified Coordinator Name</string>
+    <string name="teacher_def">Unidentified Teacher Name</string>
+    <string name="class_ma">Class :</string>
+    <string-array name="class_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string name="section">Section :</string>
+    <string-array name="section_array">
+        <item>A</item>
+        <item>B</item>
+    </string-array>
+    <string name="subject_ma">Subject :</string>
+    <string-array name="subject_array">
+        <item>English</item>
+        <item>Bengali</item>
+        <item>Hindi</item>
+        <item>Science</item>
+        <item>Geography</item>
+        <item>History</item>
+    </string-array>
+    <string name="date">Date :</string>
+    <string name="datehint">14/05/2018</string>
+    <string name="time">Time :</string>
+    <string name="timehint">03:00 pm</string>
+    <string name="confirm">confirm</string>
+    <string name="send">send</string>
+    <string name="refresh">refresh</string>
+    <string name="attendance">Student Attendance</string>
+
+    <!--Coordinator registration-->
+    <string name="school_name">Enter School name :</string>
+    <array name="school_name_array">
+        <item>ABP</item>
+        <item>DDS</item>
+    </array>
+    <string name="crd_name">Your name :</string>
+    <string name="crd_phn">Your phone no.</string>
+    <string name="crd_phn_hint">9876543210</string>
+    <string name="crd_email">Your email :</string>
+    <string name="crd_email_hint">xyz@xyz.com</string>
+    <string name="register">Register :</string>
+    <string name="iimcal">An IIM Cal. initiative</string>
+
+    <!--Digital TLM Section-->
+    <string name="digital">Digital TLM</string>
+    <string name="topic_digi">Topic :</string>
+    <string name="lesson_plan">Lesson Plan :</string>
+    <string name="ppt">PPT</string>
+    <string name="worksheet">worksheet</string>
+    <string name="download">Downloadable content :</string>
+
+    <string-array name="topic_array">
+        <item>1/4</item>
+        <item>2/4</item>
+        <item>3/4</item>
+        <item>4/4</item>
+    </string-array>
+
+
+    <!--Training needs -->
+    <string name="subject_name_1">Communicative English</string>
+    <string name="subject_name_2">Computer Basics</string>
+    <string name="course">Course Contents</string>
+    <string name="schedule">Schedule</string>
+    <string name="course_schedule">Course/Schedule</string>
+    <string name="post">post</string>
+    <string name="contact_admin">Contact Admin to schedule your training.</string>
 
 </resources>

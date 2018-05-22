@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:background="#f8f9e5">
+
+
+    <TextView
+        android:id="@+id/hregister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/register"
+        android:textAllCaps="true"
+        android:textSize="32sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/select_school"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hregister">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="@string/school_name"
+            android:textSize="24sp"/>
+
+        <Spinner
+            android:id="@+id/school_name_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:entries="@array/school_name_array"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/select_coordinator_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_school">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="@string/crd_name"
+            android:textSize="24sp"/>
+
+        <EditText
+            android:id="@+id/coordinator_name_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:hint="fname sname"
+            android:inputType="text"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/select_coordinator_phn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_coordinator_name">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="@string/crd_phn"
+            android:textSize="24sp"/>
+
+        <EditText
+            android:id="@+id/coordinator_phn_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:hint="@string/crd_phn_hint"
+            android:inputType="phone"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/select_coordinator_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/select_coordinator_phn">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:text="@string/crd_email"
+            android:textSize="24sp"/>
+
+        <EditText
+            android:id="@+id/coordinator_email_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:hint="@string/crd_email_hint"
+            android:inputType="textEmailAddress"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/url"
+        android:textColor="#454545"
+        android:textSize="12dp" />
+</RelativeLayout>
