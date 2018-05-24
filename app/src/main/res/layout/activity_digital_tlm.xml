@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,11 +28,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_margin="8dp"
-
-
+            android:onClick="moveToOptions"
         android:contentDescription="@string/back"
         android:src="@mipmap/back" />
-        <!--android:onClick="moveToOptions"-->
+
     <LinearLayout
         android:id="@+id/class_ll"
         android:layout_width="match_parent"
@@ -88,7 +86,7 @@
                 android:id="@+id/topic_sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:entries="@array/topic_array">
+                android:entries="@array/class_array">
 
             </Spinner>
     </LinearLayout>
@@ -140,33 +138,62 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         />
-    <Button
-        android:id="@+id/ppt_btn"
-        android:layout_width="100dp"
-
-
+    <TextView
+        android:id="@+id/ppt_tv"
         android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="startPPTdownload"
+        android:text="@string/ppt"
+        android:textColor="@color/colorSecondary"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@id/hdownload"
         android:layout_marginLeft="24dp"
+        android:textSize="16sp"/>
+    <ImageButton
+        android:id="@+id/ppt_btn"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/hdownload"
+        android:layout_marginLeft="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/ppt_tv"
+        android:layout_toRightOf="@id/ppt_tv"
+        android:contentDescription="@string/image"
+        android:onClick="startPPTdownload"
+        android:src="@mipmap/download"/>
+    <TextView
+        android:id="@+id/worksheet_tv"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
         android:clickable="true"
-
         android:focusable="true"
-        android:text="@string/ppt" />
-    <Button
-        android:id="@+id/worksheet_btn"
-        android:layout_width="108dp"
-
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:onClick="startWorksheetdownload"
         android:layout_alignParentRight="true"
+        android:text="@string/worksheet"
         android:layout_below="@id/hdownload"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:textColor="@color/colorSecondary"
+        android:textSize="16sp"/>
+    <ImageButton
+        android:id="@+id/worksheet_btn"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/hdownload"
+        android:layout_marginLeft="16dp"
         android:clickable="true"
-
         android:focusable="true"
-        android:text="@string/worksheet" />
+        android:layout_marginStart="16dp"
+        android:layout_toLeftOf="@+id/worksheet_tv"
+        android:layout_toStartOf="@id/worksheet_tv"
+        android:contentDescription="@string/image"
+        android:onClick="startWorksheetdownload"
+        android:src="@mipmap/download"/>
 </RelativeLayout>

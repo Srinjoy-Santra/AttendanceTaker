@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Educator Assistant</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -87,15 +87,15 @@
     <string name="topic_digi">Topic :</string>
     <string name="lesson_plan">Lesson Plan :</string>
     <string name="ppt">PPT</string>
-    <string name="worksheet">worksheet</string>
+    <string name="worksheet">Worksheet</string>
     <string name="download">Downloadable content :</string>
 
-    <string-array name="topic_array">
-        <item>1/4</item>
-        <item>2/4</item>
-        <item>3/4</item>
-        <item>4/4</item>
-    </string-array>
+    <!--<string-array name="topic_array" tools:ignore="InconsistentArrays">
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
+    </string-array>-->
 
 
     <!--Training needs -->

@@ -29,69 +29,52 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_margin="8dp"
-
-
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="moveToOptions"
         android:contentDescription="@string/back"
         android:src="@mipmap/back" />
-    <LinearLayout
-        android:id="@+id/subject_ll1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/training_header"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-        <TextView
+
+    <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/subject_name_1"
-            android:textColor="@color/colorSecondary"
-            android:textSize="16sp"
-            />
-        <RadioButton
-            android:id="@+id/subj1_rb"
-            android:layout_width="wrap_content"
+            android:id="@+id/subject_ll1"
+            android:layout_below="@id/training_header"
+            android:layout_centerHorizontal="true">
+            <RadioButton
+                android:id="@+id/subj1_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/subject_name_1"
+                android:textColor="@color/colorSecondary"
+                android:textSize="16sp">
 
-            android:layout_height="wrap_content">
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/subj2_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/subject_name_2"
+                android:textColor="@color/colorSecondary"
+                android:textSize="16sp">
+            </RadioButton>
+        </RadioGroup>
 
-        </RadioButton>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/subject_ll2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/subject_ll1"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/subject_name_2"
-            android:textColor="@color/colorSecondary"
-            android:textSize="16sp"
-            />
-        <RadioButton
-            android:id="@+id/subj2_rb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:entries="@array/class_array">
-
-        </RadioButton>
-    </LinearLayout>
 
     <Button
         android:id="@+id/course_btn"
         android:layout_width="100dp"
-
-
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@id/subject_ll2"
+        android:layout_below="@id/subject_ll1"
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
         android:clickable="true"
-
         android:focusable="true"
+        android:onClick="displayCourseContents"
         android:text="@string/course" />
     <Button
         android:id="@+id/schedule_btn"
@@ -100,12 +83,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/subject_ll2"
+        android:layout_below="@id/subject_ll1"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:clickable="true"
-
         android:focusable="true"
+        android:onClick="displaySchedule"
         android:text="@string/schedule" />
 
     <TextView

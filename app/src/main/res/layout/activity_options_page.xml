@@ -38,13 +38,11 @@
     <RelativeLayout
         android:id="@+id/option_1"
         android:layout_width="match_parent"
-
-
         android:layout_height="72dp"
         android:layout_margin="20dp"
         android:clickable="true"
         android:focusable="true"
-
+        android:onClick="moveToDigitalTLM"
         >
         <TextView
             android:id="@+id/option_tv1"
@@ -52,9 +50,10 @@
             android:layout_height="match_parent"
             android:layout_toLeftOf="@id/option_iv1"
             android:layout_toStartOf="@id/option_iv1"
-            android:background="@color/bluishDark"
+            android:background="@color/orange"
             android:gravity="center"
             android:text="@string/option1"
+            android:textColor="@color/white"
             android:textSize="20sp"
             />
         <ImageView
@@ -89,7 +88,7 @@
             android:layout_height="match_parent"
             android:layout_toEndOf="@id/option_iv2"
             android:layout_toRightOf="@id/option_iv2"
-            android:background="@color/bluishDark"
+            android:background="@color/orange"
             android:gravity="center"
             android:text="@string/option2"
             android:textSize="20sp"
@@ -113,7 +112,7 @@
             android:layout_height="match_parent"
             android:layout_toLeftOf="@id/option_iv3"
             android:layout_toStartOf="@id/option_iv3"
-            android:background="@color/bluishDark"
+            android:background="@color/orange"
             android:gravity="center"
             android:text="@string/option3"
             android:textSize="20sp"
@@ -150,7 +149,7 @@
             android:layout_height="match_parent"
             android:layout_toEndOf="@id/option_iv4"
             android:layout_toRightOf="@id/option_iv4"
-            android:background="@color/bluishDark"
+            android:background="@color/orange"
             android:gravity="center"
             android:text="@string/option4"
             android:textSize="20sp"
@@ -165,7 +164,7 @@
         android:layout_margin="20dp"
         android:clickable="true"
         android:focusable="true"
-        android:onClick="moveToAttendance"
+        android:onClick="moveToTrainingNeeds"
 
         >
         <TextView
@@ -174,7 +173,7 @@
             android:layout_height="match_parent"
             android:layout_toLeftOf="@id/option_iv5"
             android:layout_toStartOf="@id/option_iv5"
-            android:background="@color/bluishDark"
+            android:background="@color/orange"
             android:gravity="center"
             android:text="@string/option5"
             android:textSize="20sp"
