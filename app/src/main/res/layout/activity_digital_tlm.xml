@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellowish"
+    android:background="@mipmap/splashscreen"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     tools:context=".DigitalTLM">
@@ -12,16 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@color/colorPrimaryDark"
-        android:fontFamily="cursive"
+        android:background="@color/primary_light"
+        android:fontFamily="serif"
         android:gravity="center"
+        android:paddingLeft="48dp"
+        android:paddingStart="48dp"
         android:padding="4dp"
-        android:text="@string/digital"
+        android:text="@string/course11"
         android:textColor="#ffffff"
         android:textSize="28sp"
         android:textStyle="bold"
         tools:ignore="UnusedAttribute" />
-        <ImageButton
+    <ImageButton
         android:id="@+id/back_button2"
         android:layout_width="44dp"
         android:layout_height="48dp"
@@ -37,7 +39,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/digital_header"
-            android:gravity="center_horizontal"
+        android:background="@color/divider"
+        android:gravity="center_horizontal"
         android:padding="8dp">
         <TextView
             android:layout_width="wrap_content"
@@ -60,6 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/class_ll"
                 android:gravity="center_horizontal"
+            android:background="@color/divider"
                 android:padding="8dp">
             <TextView
                 android:layout_width="wrap_content"
@@ -105,14 +109,18 @@
     <!--android:onClick="displayLessonPlan"-->
     <TextView
         android:id="@+id/Hlesson"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/divider"
+        android:gravity="center_horizontal"
         android:layout_below="@id/confirm_digi"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:text="@string/lesson_plan"
-        android:textColor="@color/colorPrimaryDark"
+
+        android:textColor="@color/primary_light"
+        android:textStyle="bold"
         android:textSize="24sp"
         />
 
@@ -122,27 +130,17 @@
         android:layout_height="240dp"
         android:layout_below="@id/Hlesson"
         android:layout_marginBottom="8dp"
-        android:background="@color/bluish"
+        android:background="@color/white"
         android:orientation="vertical"
         android:scrollbars="vertical">
     </LinearLayout>
-    <TextView
-        android:id="@+id/hdownload"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/my_linear_view"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:text="@string/download"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
-        />
+
     <TextView
         android:id="@+id/ppt_tv"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_below="@id/my_linear_view"
+        android:layout_marginLeft="32dp"
         android:clickable="true"
         android:focusable="true"
         android:onClick="startPPTdownload"
@@ -150,50 +148,66 @@
         android:textColor="@color/colorSecondary"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@id/hdownload"
-        android:layout_marginLeft="24dp"
-        android:textSize="16sp"/>
+        android:layout_marginStart="32dp"
+
+        android:textSize="20sp"
+        android:textStyle="bold"/>
     <ImageButton
         android:id="@+id/ppt_btn"
-        android:layout_width="60dp"
-        android:layout_height="40dp"
-        android:layout_below="@id/hdownload"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_below="@id/ppt_tv"
         android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginStart="16dp"
-        android:layout_toEndOf="@+id/ppt_tv"
-        android:layout_toRightOf="@id/ppt_tv"
+
         android:contentDescription="@string/image"
         android:onClick="startPPTdownload"
-        android:src="@mipmap/download"/>
+        android:src="@mipmap/ereader"/>
     <TextView
         android:id="@+id/worksheet_tv"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginLeft="24dp"
-        android:layout_marginStart="24dp"
+        android:layout_below="@id/my_linear_view"
+        android:layout_marginLeft="32dp"
         android:clickable="true"
         android:focusable="true"
         android:onClick="startWorksheetdownload"
         android:layout_alignParentRight="true"
         android:text="@string/worksheet"
-        android:layout_below="@id/hdownload"
+        android:layout_marginStart="32dp"
         android:textColor="@color/colorSecondary"
-        android:textSize="16sp"/>
+        android:textSize="20sp"
+        android:textStyle="bold"/>
     <ImageButton
         android:id="@+id/worksheet_btn"
-        android:layout_width="60dp"
-        android:layout_height="40dp"
-        android:layout_below="@id/hdownload"
-        android:layout_marginLeft="16dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/worksheet_tv"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginStart="16dp"
-        android:layout_toLeftOf="@+id/worksheet_tv"
-        android:layout_toStartOf="@id/worksheet_tv"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+
         android:contentDescription="@string/image"
         android:onClick="startWorksheetdownload"
-        android:src="@mipmap/download"/>
+        android:src="@mipmap/ereader"/>
 </RelativeLayout>
+
+<!--
+<TextView
+android:id="@+id/hdownload"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_below="@id/my_linear_view"
+android:layout_centerHorizontal="true"
+android:layout_marginLeft="16dp"
+android:layout_marginStart="16dp"
+android:text="@string/download"
+android:textColor="@color/colorPrimaryDark"
+android:textSize="24sp"
+    />-->

@@ -13,11 +13,7 @@ public class OptionsPage extends AppCompatActivity {
         setContentView(R.layout.activity_options_page);
     }
 
-    public void moveToAttendance(View view) {
-        Intent intent = new Intent(OptionsPage.this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
+
 
 
     public void returnToLogin(View view) {
@@ -37,4 +33,12 @@ public class OptionsPage extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void moveToClassAdmin(View view) {
+        Intent intent = new Intent(OptionsPage.this, ClassAdmin.class);
+        startActivity(intent);
+        finish();
+    }
+
+
 }

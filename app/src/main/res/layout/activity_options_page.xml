@@ -3,9 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f8f9e5"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:background="@mipmap/splashscreen"
+    >
 
     <!--<TextView
         android:layout_width="match_parent"
@@ -17,6 +16,8 @@
         android:fontFamily="cursive"
         android:padding="4dp"
         android:layout_margin="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
         android:textSize="28sp"
         android:gravity="center"
         android:contentDescription="@string/image"
@@ -39,7 +40,7 @@
         android:id="@+id/option_1"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:layout_margin="20dp"
+
         android:clickable="true"
         android:focusable="true"
         android:onClick="moveToDigitalTLM"
@@ -50,9 +51,9 @@
             android:layout_height="match_parent"
             android:layout_toLeftOf="@id/option_iv1"
             android:layout_toStartOf="@id/option_iv1"
-            android:background="@color/orange"
+            android:background="@color/primary"
             android:gravity="center"
-            android:text="@string/option1"
+            android:text="@string/class1"
             android:textColor="@color/white"
             android:textSize="20sp"
             />
@@ -63,17 +64,91 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:contentDescription="@string/image"
-            android:src="@mipmap/tlm"/>
+            android:src="@mipmap/lecture"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/sub_option_11"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_below="@id/option_1"
+
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="28dp"
+
+        android:onClick="moveToDigitalTLM"
+        android:background="#e5f6f9"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:id="@+id/sub_option_11_iv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/image"
+            android:src="@mipmap/library"/>
+        <TextView
+            android:id="@+id/sub_option_11_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/sub_option_11_iv"
+            android:layout_toRightOf="@id/sub_option_11_iv"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:text="@string/course11"
+            android:textSize="20sp"
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/sub_option_12"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_below="@id/sub_option_11"
+
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+
+        android:background="#e5f6f9"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="moveToClassAdmin">
+        <ImageView
+            android:id="@+id/sub_option_12_iv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/image"
+            android:src="@mipmap/calculation"/>
+        <TextView
+            android:id="@+id/sub_option_12_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/sub_option_12_iv"
+            android:layout_toRightOf="@id/sub_option_12_iv"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:text="@string/admin12"
+            android:textSize="20sp"
+            />
+
+
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/option_2"
         android:layout_width="match_parent"
         android:layout_height="72dp"
-        android:layout_below="@id/option_1"
-        android:layout_margin="20dp"
-        android:background="#e5f6f9"
+        android:layout_below="@id/sub_option_12"
         android:clickable="true"
-        android:focusable="true">
+        android:focusable="true"
+        android:onClick="moveToDigitalTLM"
+        >
         <ImageView
             android:id="@+id/option_iv2"
             android:layout_width="72dp"
@@ -81,21 +156,129 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:contentDescription="@string/image"
-            android:src="@mipmap/routine"/>
+            android:src="@mipmap/video_chat"/>
         <TextView
             android:id="@+id/option_tv2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_toEndOf="@id/option_iv2"
             android:layout_toRightOf="@id/option_iv2"
-            android:background="@color/orange"
+            android:background="@color/primary"
             android:gravity="center"
-            android:text="@string/option2"
+            android:text="@string/train2"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/sub_option_21"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_below="@id/option_2"
+
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="28dp"
+
+        android:background="#e5f6f9"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:id="@+id/sub_option_21_iv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/image"
+            android:src="@mipmap/chat"/>
+        <TextView
+            android:id="@+id/sub_option_21_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/sub_option_21_iv"
+            android:layout_toStartOf="@id/sub_option_21_iv"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:text="@string/subject_name_1"
             android:textSize="20sp"
             />
 
+
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/sub_option_22"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_below="@id/sub_option_21"
+
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+
+        android:background="#e5f6f9"
+        android:clickable="true"
+        android:focusable="true">
+        <ImageView
+            android:id="@+id/sub_option_22_iv"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/image"
+            android:src="@mipmap/studying"/>
+        <TextView
+            android:id="@+id/sub_option_22_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/sub_option_22_iv"
+            android:layout_toStartOf="@id/sub_option_22_iv"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:text="@string/subject_name_2"
+            android:textSize="20sp"
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--<RelativeLayout
         android:id="@+id/option_3"
         android:layout_width="match_parent"
         android:layout_height="72dp"
@@ -196,7 +379,7 @@
         android:text="@string/iimcal"
         android:textColor="#454545"
         android:textSize="12sp" />
-
+-->
 
 
 </RelativeLayout>

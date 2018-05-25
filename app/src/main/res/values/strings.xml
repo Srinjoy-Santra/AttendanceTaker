@@ -14,11 +14,18 @@
 
     <!--OptionsPage-->
     <string name="options_page">Options</string>
-    <string name="option1">Digital TLM</string>
-    <string name="option2">Routine</string>
-    <string name="option3">Attendance</string>
-    <string name="option4">Assessment</string>
-    <string name="option5">Training Needs</string>
+    <string name="class1">My Class</string>
+    <string name="course11">Course Material</string>
+    <string name="ppt111">PPT</string>
+    <string name="work112">Worksheet</string>
+    <string name="admin12">Class Administrator</string>
+    <string name="attend121">Attendance</string>
+    <string name="eval122">Evaluation</string>
+    <string name="form1221">Formative</string>
+    <string name="sum1222">Summative</string>
+    <string name="view">View</string>
+    <string name="Update">Update</string>
+    <string name="train2">My Training</string>
     <string name="image">image</string>
 
     <!--States-->
@@ -100,11 +107,15 @@
 
     <!--Training needs -->
     <string name="subject_name_1">Communicative English</string>
-    <string name="subject_name_2">Computer Basics</string>
+    <string name="subject_name_2">Digital Literacy</string>
     <string name="course">Course Contents</string>
     <string name="schedule">Schedule</string>
     <string name="course_schedule">Course/Schedule</string>
     <string name="post">post</string>
     <string name="contact_admin">Contact Admin to schedule your training.</string>
+
+    <!--View/Update-->
+    <string name="update">Update</string>
+    <string name="see">View</string>
 
 </resources>
