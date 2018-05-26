@@ -117,5 +117,8 @@
     <!--View/Update-->
     <string name="update">Update</string>
     <string name="see">View</string>
+    <string name="save">Save</string>
+    <string name="returns">Return</string>
+    <string name="blank">     </string>
 
 </resources>

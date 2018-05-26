@@ -150,7 +150,7 @@
             </LinearLayout>
             <EditText
                 android:id="@+id/teacher_ma"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:hint="@string/teacher_def"
@@ -236,7 +236,8 @@
 
         android:background="#e5f6f9"
         android:clickable="true"
-        android:focusable="true">
+        android:focusable="true"
+        android:onClick="moveToFormative">
         <ImageView
             android:id="@+id/sub_option_21_iv"
             android:layout_width="72dp"
@@ -272,7 +273,8 @@
 
         android:background="#e5f6f9"
         android:clickable="true"
-        android:focusable="true">
+        android:focusable="true"
+        android:onClick="moveToSummative">
         <ImageView
             android:id="@+id/sub_option_22_iv"
             android:layout_width="72dp"

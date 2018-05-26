@@ -10,19 +10,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 
 public class MainActivity extends Activity {
 
     private static final String TAG = "MainActivity";
     //vars
     private EditText dateEt;
+    private EditText timeEt;
     private DatePickerDialog.OnDateSetListener dateSetListener;
     private Spinner classSp,sectionSp;
     private ArrayList<StudentBasics> mStudent = new ArrayList<>();
@@ -36,43 +35,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-        Log.d(TAG, "onCreate: started.");
-
-        dateEt = findViewById(R.id.date_et);
-        classSp = findViewById(R.id.class_sp);
-        sectionSp = findViewById(R.id.section_sp);
-
-        dateEt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Calendar calendar = Calendar.getInstance();
-
-                int yy = calendar.get(Calendar.YEAR);
-                int mm = calendar.get(Calendar.MONTH);
-                int dd = calendar.get(Calendar.DAY_OF_MONTH);
-
-                DatePickerDialog dialog = new DatePickerDialog(
-                        MainActivity.this,
-                        android.R.style.Theme_Holo_Dialog_MinWidth,
-                        dateSetListener,
-                        yy, mm, dd);
-                //dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
-            }
-        });
-        dateSetListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                String dateStr = dayOfMonth+"/"+month+"/"+year;
-                Log.d(TAG,"onDateset : date : "+dateStr);
-                dateEt.setText(dateStr);
-            }
-        };
-
-
 
         initValues();
 
@@ -88,7 +50,7 @@ public class MainActivity extends Activity {
         mStudent.get(1).setName("Raj");
         mStudent.get(2).setName("Yash");
         mStudent.get(3).setName("Tim");
-        mStudent.get(4).setName("Ritobroto Bandyopadhyay");
+        mStudent.get(4).setName("First Middle Last");
         mStudent.get(5).setName("Srinjoy Santra");
 
         for(int i=0;i<mStudent.size();i++)

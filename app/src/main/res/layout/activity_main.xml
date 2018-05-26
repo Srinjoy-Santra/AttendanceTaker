@@ -43,148 +43,18 @@
             android:id="@+id/school"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:padding="8dp"
-            android:text="@string/school_def"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Simple application that shows how to use marquee, with a long text"
             android:textColor="@color/colorSecondary"
             android:textSize="16sp"
             />
-        <TextView
-            android:id="@+id/coordinator_ma"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:padding="8dp"
-            android:text="@string/coordinator_def"
-            android:textColor="@color/colorSecondary"
-            android:textSize="16sp"
-            />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:padding="8dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/class_ma"
-                android:textColor="@color/colorSecondary"
-                android:textSize="16sp"
-                />
-            <Spinner
-                android:id="@+id/class_sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/class_array">
-
-            </Spinner>
-        <!--</LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:gravity="center_horizontal">-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/section"
-                android:textColor="@color/colorSecondary"
-                android:textSize="16sp"
-                />
-            <Spinner
-                android:id="@+id/section_sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:entries="@array/section_array">
-
-            </Spinner>
-
-        </LinearLayout>
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:gravity="center_horizontal"
-           android:padding="8dp">
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="@string/subject_ma"
-               android:textColor="@color/colorSecondary"
-               android:textSize="16sp"
-               />
-           <Spinner
-               android:id="@+id/subject_sp"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:entries="@array/subject_array">
-
-            </Spinner>
-       </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:padding="8dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/date"
-                android:textColor="@color/colorSecondary"
-                android:textSize="16sp"
-                />
-            <EditText
-                android:id="@+id/date_et"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:hint="@string/datehint"
-                android:inputType="date"
-                android:textSize="16sp">
-
-            </EditText>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/time"
-                android:textColor="@color/colorSecondary"
-                android:textSize="16sp"
-                />
-            <EditText
-                android:id="@+id/time_et"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:focusable="false"
-                android:focusableInTouchMode="false"
-                android:hint="@string/timehint"
-                android:inputType="time"
-                android:textSize="16sp">
-
-            </EditText>
-
-        </LinearLayout>
-       <EditText
-           android:id="@+id/teacher_ma"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:gravity="center_horizontal"
-           android:hint="@string/teacher_def"
-           android:inputType="textPersonName"
-           android:padding="8dp"
-           android:textColor="@color/colorSecondary"
-           android:textSize="16sp"
-           />
-
-       <Button
-           android:layout_width="100dp"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center_horizontal"
-           android:clickable="true"
-           android:focusable="true"
-           android:onClick="displayViews"
-           android:text="@string/confirm" />
     </LinearLayout>
+
    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -238,16 +108,18 @@
            android:layout_marginRight="16dp"
            android:clickable="true"
            android:focusable="true"
-           android:onClick="refreshAttendance"/>
+           android:onClick="refreshAttendance"
+           />
     </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_recycler_view"
         android:layout_width="368dp"
-        android:layout_height="120dp"
+        android:layout_height="352dp"
         android:layout_below="@id/hcol"
         android:layout_marginBottom="8dp"
-        android:scrollbars="vertical" />
+        android:scrollbars="vertical"
+        />
 
     <Button
         android:id="@+id/send_button"
@@ -257,7 +129,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="4dp"
         android:onClick="sendToDB"
-        android:text="@string/send"/>
+        android:text="@string/send"
+        />
 
     <!--<Button
         android:id="@+id/refresh_button"

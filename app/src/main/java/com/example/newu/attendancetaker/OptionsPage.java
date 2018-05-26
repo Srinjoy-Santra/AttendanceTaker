@@ -23,6 +23,7 @@ public class OptionsPage extends AppCompatActivity {
     }
 
     public void moveToDigitalTLM(View view) {
+        //getIntent();
         Intent intent = new Intent(OptionsPage.this, DigitalTLM.class);
         startActivity(intent);
         finish();

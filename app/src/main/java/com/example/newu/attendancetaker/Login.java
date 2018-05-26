@@ -36,6 +36,10 @@ public class Login extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),id+" "+password, Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(Login.this, OptionsPage.class);
+
+        //intent.putExtra("id",id);
+        //intent.putExtra("pass",password);
+
         startActivity(intent);
         finish();
     }
