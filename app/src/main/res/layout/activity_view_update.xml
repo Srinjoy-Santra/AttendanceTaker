@@ -4,16 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@mipmap/splashscreen"
     android:orientation="vertical"
-    tools:context=".ViewUpdate">
+    tools:context=".Activity.ViewUpdate">
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/primary_dark"
+        android:id="@+id/header_vu"
+        android:text="@string/class1"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"/>
+    <com.tomer.fadingtextview.FadingTextView
+        android:id="@+id/fadingTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:id="@+id/header_vu"
-        android:text="@string/class1"
-        android:textSize="32sp"/>
+        android:textColor="@color/primary_dark"
+        app:timeout="500"
+         />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,13 +31,14 @@
         <LinearLayout
             android:id="@+id/view_layout"
             android:layout_width="160dp"
+            android:layout_height="wrap_content"
 
             android:layout_marginEnd="12dp"
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:layout_marginStart="12dp"
 
-            android:layout_height="wrap_content"
+            android:background="@color/accent"
             android:clickable="true"
             android:focusable="true"
             android:onClick="displayViews"
@@ -36,6 +47,7 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:src="@mipmap/visibility"
+                android:contentDescription="@string/image"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -53,12 +65,14 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"
+            android:background="@color/accent"
             android:onClick="displayUpdate"
             android:orientation="horizontal">
             <ImageView
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:src="@mipmap/web"
+                android:contentDescription="@string/image"
                 />
             <TextView
                 android:layout_width="match_parent"
@@ -70,7 +84,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="380dp"
         android:background="@color/bluish"></LinearLayout>
 
     <Button

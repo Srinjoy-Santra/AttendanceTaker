@@ -4,15 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/splashscreen"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    tools:context=".DigitalTLM">
+
+    tools:context=".Activity.DigitalTLM">
     <TextView
         android:id="@+id/digital_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@color/primary_light"
+        android:layout_height="48dp"
+
+        android:background="@color/primary_dark"
         android:fontFamily="serif"
         android:gravity="center"
         android:paddingLeft="48dp"
@@ -26,10 +25,10 @@
     <ImageButton
         android:id="@+id/back_button2"
         android:layout_width="44dp"
-        android:layout_height="48dp"
+        android:layout_height="44dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_margin="8dp"
+
             android:onClick="moveToOptions"
         android:contentDescription="@string/back"
         android:src="@mipmap/back" />
@@ -41,7 +40,9 @@
         android:layout_below="@+id/digital_header"
         android:background="@color/divider"
         android:gravity="center_horizontal"
-        android:padding="8dp">
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -63,8 +64,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/class_ll"
                 android:gravity="center_horizontal"
-            android:background="@color/divider"
-                android:padding="8dp">
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/divider">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -119,7 +121,7 @@
         android:layout_marginStart="16dp"
         android:text="@string/lesson_plan"
 
-        android:textColor="@color/primary_light"
+        android:textColor="@color/primary_dark"
         android:textStyle="bold"
         android:textSize="24sp"
         />
@@ -127,9 +129,13 @@
     <LinearLayout
         android:id="@+id/my_linear_view"
         android:layout_width="368dp"
-        android:layout_height="240dp"
+        android:layout_height="272dp"
         android:layout_below="@id/Hlesson"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="4dp"
         android:background="@color/white"
         android:orientation="vertical"
         android:scrollbars="vertical">
@@ -171,13 +177,13 @@
         android:layout_width="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@id/my_linear_view"
-        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
         android:clickable="true"
         android:focusable="true"
         android:onClick="startWorksheetdownload"
         android:layout_alignParentRight="true"
         android:text="@string/worksheet"
-        android:layout_marginStart="32dp"
+        android:layout_marginRight="32dp"
         android:textColor="@color/colorSecondary"
         android:textSize="20sp"
         android:textStyle="bold"/>
@@ -190,8 +196,8 @@
         android:layout_below="@id/worksheet_tv"
         android:clickable="true"
         android:focusable="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
 
         android:contentDescription="@string/image"
         android:onClick="startWorksheetdownload"

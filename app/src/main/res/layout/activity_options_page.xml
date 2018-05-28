@@ -23,8 +23,8 @@
         android:contentDescription="@string/image"
         />
 
-    <ImageButton
-        android:id="@+id/back_button"
+    <ImageTextView
+        android:id="@+id/back_TextView"
         android:layout_width="44dp"
         android:layout_height="48dp"
         android:layout_alignParentStart="true"
@@ -39,7 +39,7 @@
     <RelativeLayout
         android:id="@+id/option_1"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="64dp"
 
         android:clickable="true"
         android:focusable="true"
@@ -55,12 +55,13 @@
             android:gravity="center"
             android:text="@string/class1"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="28sp"
+            android:textStyle="bold"
             />
         <ImageView
             android:id="@+id/option_iv1"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:contentDescription="@string/image"
@@ -69,13 +70,13 @@
     <RelativeLayout
         android:id="@+id/sub_option_11"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="64dp"
         android:layout_below="@id/option_1"
 
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
 
         android:onClick="moveToDigitalTLM"
         android:background="#e5f6f9"
@@ -83,8 +84,8 @@
         android:focusable="true">
         <ImageView
             android:id="@+id/sub_option_11_iv"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:contentDescription="@string/image"
@@ -98,7 +99,10 @@
             android:background="@color/accent"
             android:gravity="center"
             android:text="@string/course11"
+            android:textAllCaps="false"
+            android:textStyle="bold"
             android:textSize="20sp"
+
             />
 
 
@@ -106,10 +110,10 @@
     <RelativeLayout
         android:id="@+id/sub_option_12"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="64dp"
         android:layout_below="@id/sub_option_11"
 
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="24dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
@@ -120,8 +124,8 @@
         android:onClick="moveToClassAdmin">
         <ImageView
             android:id="@+id/sub_option_12_iv"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:contentDescription="@string/image"
@@ -135,7 +139,10 @@
             android:background="@color/accent"
             android:gravity="center"
             android:text="@string/admin12"
+            android:onClick="moveToClassAdmin"
+            android:textAllCaps="false"
             android:textSize="20sp"
+            android:textStyle="bold"
             />
 
 
@@ -143,16 +150,14 @@
     <RelativeLayout
         android:id="@+id/option_2"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="64dp"
         android:layout_below="@id/sub_option_12"
         android:clickable="true"
-        android:focusable="true"
-        android:onClick="moveToDigitalTLM"
         >
         <ImageView
             android:id="@+id/option_iv2"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:contentDescription="@string/image"
@@ -167,27 +172,29 @@
             android:gravity="center"
             android:text="@string/train2"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="28sp"
+            android:textStyle="bold"
             />
     </RelativeLayout>
     <RelativeLayout
         android:id="@+id/sub_option_21"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="64dp"
         android:layout_below="@id/option_2"
 
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
 
         android:background="#e5f6f9"
         android:clickable="true"
-        android:focusable="true">
+        android:focusable="true"
+        android:onClick="moveToEnglish">
         <ImageView
             android:id="@+id/sub_option_21_iv"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:contentDescription="@string/image"
@@ -202,6 +209,8 @@
             android:gravity="center"
             android:text="@string/subject_name_1"
             android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
             />
 
 
@@ -209,21 +218,22 @@
     <RelativeLayout
         android:id="@+id/sub_option_22"
         android:layout_width="match_parent"
-        android:layout_height="72dp"
+        android:layout_height="64dp"
         android:layout_below="@id/sub_option_21"
 
         android:layout_marginBottom="4dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="8dp"
 
         android:background="#e5f6f9"
         android:clickable="true"
-        android:focusable="true">
+        android:focusable="true"
+        android:onClick="moveToDigital">
         <ImageView
             android:id="@+id/sub_option_22_iv"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:contentDescription="@string/image"
@@ -238,12 +248,51 @@
             android:gravity="center"
             android:text="@string/subject_name_2"
             android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
             />
 
 
     </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/sub_option_23"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_below="@id/sub_option_22"
+
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+
+        android:background="#e5f6f9"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="moveToOthers">
+        <ImageView
+            android:id="@+id/sub_option_23_iv"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/image"
+            android:src="@mipmap/brainstorm"/>
+        <TextView
+            android:id="@+id/sub_option_23_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/sub_option_23_iv"
+            android:layout_toRightOf="@id/sub_option_23_iv"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:text="@string/other"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
 
 
+    </RelativeLayout>
 
 
 

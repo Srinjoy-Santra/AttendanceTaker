@@ -6,7 +6,7 @@
     android:background="@color/yellowish"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context=".DigitalTLM">
+    tools:context=".Activity.DigitalTLM">
     <TextView
         android:id="@+id/digital_header"
         android:layout_width="match_parent"

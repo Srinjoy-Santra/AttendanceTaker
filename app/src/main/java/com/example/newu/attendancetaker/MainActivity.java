@@ -14,6 +14,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.newu.attendancetaker.Activity.OptionsPage;
+import com.example.newu.attendancetaker.Activity.StudentBasics;
+import com.example.newu.attendancetaker.Adapter.RecyclerViewAdapter;
+
 import java.util.ArrayList;
 
 public class MainActivity extends Activity {

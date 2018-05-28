@@ -113,6 +113,7 @@
     <string name="course_schedule">Course/Schedule</string>
     <string name="post">post</string>
     <string name="contact_admin">Contact Admin to schedule your training.</string>
+    <string name="other">Any other training needs?</string>
 
     <!--View/Update-->
     <string name="update">Update</string>
@@ -120,5 +121,28 @@
     <string name="save">Save</string>
     <string name="returns">Return</string>
     <string name="blank">     </string>
+    <string name="ask_need">Enter your tarining need...</string>
+
+
+    <!--  Theme  -->
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="nav_item_home">Home</string>
+    <string name="nav_item_friends">Friends</string>
+    <string name="nav_item_notifications">Messages</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_friends</item>
+        <item>@string/nav_item_notifications</item>
+    </string-array>
+
+    <string name="title_messages">Messages</string>
+    <string name="title_friends">Friends</string>
+    <string name="title_home">Home</string>
 
 </resources>

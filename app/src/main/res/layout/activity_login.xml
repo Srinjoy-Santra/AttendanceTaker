@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/splashscreen"
-    tools:context=".Login">
+    tools:context=".Activity.Login">
 
      <TextView
          android:id="@+id/login_header"
          android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_margin="8dp"
+         android:layout_height="48dp"
+
          android:background="@color/primary"
-         android:fontFamily="sans-serif"
+         android:fontFamily="serif"
          android:gravity="center"
          android:padding="4dp"
          android:text="@string/login"

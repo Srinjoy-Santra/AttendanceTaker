@@ -4,64 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/yellowish"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    tools:context=".TrainingNeeds">
+    android:background="@mipmap/splashscreen"
+
+    tools:context=".Activity.TrainingNeeds">
     <TextView
         android:id="@+id/training_header"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:background="@color/colorPrimaryDark"
-        android:fontFamily="cursive"
+        android:layout_height="48dp"
+        android:background="@color/primary_dark"
+        android:fontFamily="serif"
         android:gravity="center"
         android:padding="4dp"
         android:text="@string/train2"
         android:textColor="#ffffff"
         android:textSize="28sp"
         android:textStyle="bold"
-        tools:ignore="UnusedAttribute" />
+         />
     <ImageButton
         android:id="@+id/back_button2"
         android:layout_width="44dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_margin="8dp"
+
         android:clickable="true"
         android:focusable="true"
         android:onClick="moveToOptions"
         android:contentDescription="@string/back"
         android:src="@mipmap/back" />
 
-    <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/subject_ll1"
-            android:layout_below="@id/training_header"
-            android:layout_centerHorizontal="true">
-            <RadioButton
-                android:id="@+id/subj1_rb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onRadioButtonClicked"
-                android:text="@string/subject_name_1"
-                android:textColor="@color/colorSecondary"
-                android:textSize="16sp">
+    <EditText
+        android:id="@+id/needs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/training_header"
+        android:hint="@string/ask_need"/>
+    <Button
+        android:id="@+id/post"
+        android:layout_width="100dp"
 
-            </RadioButton>
-            <RadioButton
-                android:id="@+id/subj2_rb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onRadioButtonClicked"
-                android:text="@string/subject_name_2"
-                android:textColor="@color/colorSecondary"
-                android:textSize="16sp">
-            </RadioButton>
-        </RadioGroup>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/needs"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
 
+        android:focusable="true"
+        android:text="@string/post" />
+
+
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/post"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/course_schedule"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/my_details_view"
+        android:layout_width="368dp"
+        android:layout_height="272dp"
+        android:layout_below="@id/details"
+        android:layout_marginBottom="8dp"
+        android:background="@color/bluish"
+        android:orientation="vertical"
+        android:scrollbars="vertical">
+    </LinearLayout>
 
     <Button
         android:id="@+id/course_btn"
@@ -69,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@id/subject_ll1"
+        android:layout_below="@id/my_details_view"
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
         android:clickable="true"
@@ -83,7 +97,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_below="@id/subject_ll1"
+        android:layout_below="@id/my_details_view"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:clickable="true"
@@ -92,46 +106,41 @@
         android:text="@string/schedule" />
 
     <TextView
-        android:id="@+id/details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/schedule_btn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:text="@string/course_schedule"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="24sp"
-        />
-
-    <LinearLayout
-        android:id="@+id/my_details_view"
-        android:layout_width="368dp"
-        android:layout_height="240dp"
-        android:layout_below="@id/details"
-        android:layout_marginBottom="8dp"
-        android:background="@color/bluish"
-        android:orientation="vertical"
-        android:scrollbars="vertical">
-    </LinearLayout>
-    <Button
-        android:id="@+id/post"
-        android:layout_width="100dp"
-
-        android:layout_height="wrap_content"
-        android:layout_below="@id/my_details_view"
-        android:layout_centerHorizontal="true"
-        android:clickable="true"
-
-        android:focusable="true"
-        android:text="@string/post" />
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_below="@id/post"
+
         android:layout_marginBottom="4dp"
         android:text="@string/contact_admin"
         android:textSize="16sp"/>
+
     <!--android:onClick="displayLessonPlan"-->
 </RelativeLayout>
+
+<!--
+<RadioGroup
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:id="@+id/subject_ll1"
+android:layout_below="@id/training_header"
+android:layout_centerHorizontal="true">
+<RadioButton
+    android:id="@+id/subj1_rb"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onRadioButtonClicked"
+    android:text="@string/subject_name_1"
+    android:textColor="@color/colorSecondary"
+    android:textSize="16sp">
+
+</RadioButton>
+<RadioButton
+    android:id="@+id/subj2_rb"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:onClick="onRadioButtonClicked"
+    android:text="@string/subject_name_2"
+    android:textColor="@color/colorSecondary"
+    android:textSize="16sp">
+</RadioButton>
+</RadioGroup>-->
