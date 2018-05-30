@@ -37,6 +37,7 @@ public class ViewUpdate extends AppCompatActivity {
         button = findViewById(R.id.button_vu);
         button.setText(getResources().getString(R.string.blank));
         button.setEnabled(false);
+        button.setVisibility(View.INVISIBLE);
 
         String texts[] ={clas+" "+section,date,time};
         FadingTextView fadingTextView = (FadingTextView) findViewById(R.id.fadingTextView);
@@ -48,6 +49,7 @@ public class ViewUpdate extends AppCompatActivity {
         ViewOption =true; UpdateOption =false;
         Toast.makeText(getApplicationContext(),"View mode!",Toast.LENGTH_SHORT).show();
         button.setEnabled(true);
+        button.setVisibility(View.VISIBLE);
         button.setText(getResources().getString(R.string.returns));
     }
 
@@ -55,6 +57,7 @@ public class ViewUpdate extends AppCompatActivity {
         ViewOption =false; UpdateOption =true;
         Toast.makeText(getApplicationContext(),"Update mode!",Toast.LENGTH_SHORT).show();
         button.setEnabled(true);
+        button.setVisibility(View.VISIBLE);
         button.setText(getResources().getString(R.string.save));
     }
 

@@ -43,7 +43,7 @@
 
         android:clickable="true"
         android:focusable="true"
-        android:onClick="moveToDigitalTLM"
+        android:onClick="moveToTabs"
         >
         <TextView
             android:id="@+id/option_tv1"

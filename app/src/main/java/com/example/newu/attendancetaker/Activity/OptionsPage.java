@@ -14,10 +14,6 @@ public class OptionsPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options_page);
     }
-
-
-
-
     public void returnToLogin(View view) {
         Intent intent = new Intent(OptionsPage.this, Login.class);
         startActivity(intent);
@@ -61,4 +57,9 @@ public class OptionsPage extends AppCompatActivity {
     }
 
 
+    public void moveToTabs(View view) {
+        Intent intent = new Intent(OptionsPage.this, TabsActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

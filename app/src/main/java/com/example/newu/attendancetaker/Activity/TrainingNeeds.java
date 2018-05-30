@@ -1,21 +1,22 @@
 package com.example.newu.attendancetaker.Activity;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.newu.attendancetaker.Fragments.LessonPlanFragment;
 import com.example.newu.attendancetaker.R;
 
 public class TrainingNeeds extends AppCompatActivity {
 
     private static String message;
-    LinearLayout detailsLayout;
+    private Fragment detailsFragment;
     private Button schedule,courseCont;
     /*private static boolean engIsChecked,compIsChecked;*/
     private EditText courseSel;
@@ -30,7 +31,7 @@ public class TrainingNeeds extends AppCompatActivity {
         schedule = findViewById(R.id.schedule_btn);
         courseCont = findViewById(R.id.course_btn);
         coursched = findViewById(R.id.details);
-        detailsLayout =findViewById(R.id.my_details_view);
+        //detailsFragment =findViewById(R.id.my_details_view);
 
         Intent intent = getIntent();
         if(intent == null)
@@ -54,7 +55,7 @@ public class TrainingNeeds extends AppCompatActivity {
             courseCont.setEnabled(false);
             courseCont.setVisibility(View.INVISIBLE);
             coursched.setVisibility(View.INVISIBLE);
-            detailsLayout.setVisibility(View.INVISIBLE);
+            //detailsFragment.setVisibility(View.INVISIBLE);
 
         }
 
@@ -70,6 +71,8 @@ public class TrainingNeeds extends AppCompatActivity {
 
     public void displayCourseContents(View view) {
 
+        LessonPlanFragment lessonPlanFragment = (LessonPlanFragment)getSupportFragmentManager().findFragmentById(R.id.my_details_view);
+        lessonPlanFragment.setLessonText();
 
         Toast.makeText(getApplicationContext(),"Course contents of "+message,Toast.LENGTH_SHORT).show();
 
@@ -107,5 +110,6 @@ public class TrainingNeeds extends AppCompatActivity {
 
 
     }*/
+
 
 }

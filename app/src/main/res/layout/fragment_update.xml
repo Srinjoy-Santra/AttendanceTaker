@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.UpdateFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/update_fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:text="@string/update"
+        android:textSize="40dp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/update_fragment_column"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/update_fragment_header"
+        android:layout_marginTop="4dp"
+        >
+        <TextView
+            android:id="@+id/Hroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/roll"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            />
+        <TextView
+            android:id="@+id/Hname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="56dp"
+            android:layout_marginStart="56dp"
+            android:layout_toEndOf="@id/Hroll"
+            android:layout_toLeftOf="@id/Hstatus"
+
+            android:layout_toRightOf="@id/Hroll"
+            android:layout_toStartOf="@id/Hstatus"
+            android:text="@string/name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            />
+        <TextView
+            android:id="@+id/Hstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/status_check"
+            android:layout_toStartOf="@id/status_check"
+            android:text="@string/status"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            />
+        <CheckBox
+            android:id="@+id/status_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:clickable="true"
+            android:focusable="true"
+
+            />
+    </RelativeLayout>
+</RelativeLayout>
