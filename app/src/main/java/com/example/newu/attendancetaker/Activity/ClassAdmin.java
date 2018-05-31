@@ -124,7 +124,8 @@ public class ClassAdmin extends AppCompatActivity {
     }
 
     public void moveToAttendance(View view) {
-        checkInput();
+        if(!checkInput())
+            return;
         Intent intent = new Intent(ClassAdmin.this, ViewUpdate.class);
         String message = getResources().getString(R.string.attend121);
         intent.putExtra("nextHeader",message);
@@ -139,7 +140,8 @@ public class ClassAdmin extends AppCompatActivity {
     }
 
     public void moveToSummative(View view) {
-        checkInput();
+        if(!checkInput())
+            return;
         Intent intent = new Intent(ClassAdmin.this, ViewUpdate.class);
         String message = getResources().getString(R.string.sum1222)+" "+getResources().getString(R.string.eval122);
         intent.putExtra("nextHeader",message);
@@ -154,7 +156,8 @@ public class ClassAdmin extends AppCompatActivity {
     }
 
     public void moveToFormative(View view) {
-        checkInput();
+        if(!checkInput())
+            return;
         Intent intent = new Intent(ClassAdmin.this, ViewUpdate.class);
         String message = getResources().getString(R.string.form1221)+" "+getResources().getString(R.string.eval122);
         intent.putExtra("nextHeader",message);
@@ -168,13 +171,15 @@ public class ClassAdmin extends AppCompatActivity {
         finish();
     }
 
+    
+
     public void moveToOptions(View view) {
         Intent intent = new Intent(ClassAdmin.this, OptionsPage.class);
         startActivity(intent);
         finish();
     }
 
-    public void checkInput()
+    public boolean checkInput()
     {
         String message;
         if(dateEt == null)
@@ -183,8 +188,9 @@ public class ClassAdmin extends AppCompatActivity {
             message = "Enter a valid time!";
         else if (teacherEt == null)
             message = "Enter a valid teacher name!";
-        else return;
+        else return true;
 
         Toast.makeText(getApplicationContext(),message,Toast.LENGTH_SHORT).show();
+        return false;
     }
 }

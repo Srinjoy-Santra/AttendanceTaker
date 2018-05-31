@@ -62,7 +62,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:text="@string/course_schedule"
-        android:textColor="@color/primary_dark"
+        android:textColor="@color/colorSecondary"
         android:textSize="24sp"
         />
 

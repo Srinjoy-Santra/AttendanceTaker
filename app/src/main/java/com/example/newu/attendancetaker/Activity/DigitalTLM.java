@@ -27,8 +27,7 @@ public class DigitalTLM extends AppCompatActivity {
         topicSp = findViewById(R.id.topic_sp);
 
 
-        /*"English is a West Germanic language that" +
-                " was first spoken in early medieval England and is now a global lingua franca.";*/
+
 
     }
 
